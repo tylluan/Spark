@@ -28,7 +28,7 @@ To set up a Spark cluster issue the following command:
 ```$ docker build -t pyspark```
 This command will automatically download, install, and configure Spark, Python, and Jupyter notebook in an isolated environment. To start Spark and a Jupyter notebook session, you can execute the following command:
 ```bash
-docker run -it --rm -v YYYYYY:/home/jovyan/dir_on_host -p 8888:8888 -p 4040:4040 bigdatateam/spark-course1
+docker run -it --rm -v YYYYYY:/home/jovyan/dir_on_host -p 8888:8888 -p 4040:4040 bigdatateam/all-spark-with-data
 ```
 
 ```-it``` allows to see the information from the container
@@ -41,9 +41,9 @@ docker run -it --rm -v YYYYYY:/home/jovyan/dir_on_host -p 8888:8888 -p 4040:4040
 
 (```--rm and -v YYYYYY:/home/jovyan/dir_on_host``` can be safely removed if it is not needed.)
 
-```-p 8888:8888``` allows to connect to the Jupyter of the container on 127.0.0.1:8888 or localhost:8888, 8888 - a port number of the local system
+```-p 8888:8888``` allows to connect to the Jupyter of the container on ```127.0.0.1:8888``` or ```localhost:8888```, 8888 - a port number of the local system
 
-```-p 4040:4040``` allows to connect to the Spark web UI of the container on 127.0.0.1:4040 or localhost:4040, 4040 - a port number of the local system (if you do not need this UI, delete this option)
+```-p 4040:4040``` allows to connect to the Spark web UI of the container on ```127.0.0.1:4040``` or ```localhost:4040```, 4040 - a port number of the local system (if you do not need this UI, delete this option)
 
 
 After issuing the command, you can open a browser to
